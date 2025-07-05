@@ -1,7 +1,7 @@
 # LLM + RAG-Based Function Execution API
 
 ## Overview
-This project is a Flask-based API that retrieves and executes automation functions using LLM + RAG (Retrieval-Augmented Generation). It processes user prompts, maps them to predefined functions, and generates executable Python code.
+This project is a Flask-based API that retrieves and executes automation functions using LLM + RAG (Retrieval-Augmented Generation). It processes user text prompts & voice propmts, maps them to predefined functions, and generates executable Python code.
 
 ## Features
 - Accepts user prompts and maps them to function calls.
@@ -21,7 +21,17 @@ This project is a Flask-based API that retrieves and executes automation functio
    ```
 3. Run the Flask API:
    ```sh
-   python Flask_app.py
+   python app.py
+   ```
+4. Run Voice Client:
+   ```sh
+   cd client
+   python voice_client.py 
+   ```
+4. Run text Client:
+   ```sh
+   cd client
+   python text_client.py 
    ```
 
 ## Usage
