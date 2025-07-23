@@ -22,7 +22,7 @@ class VoiceAutomationTester:
         self.tts_engine.setProperty('volume', 0.9)
 
         # Voice settings
-        self.wake_word = "computer"
+        self.wake_word = "assistant"
         self.recognizer.energy_threshold = 4000
         self.recognizer.dynamic_energy_threshold = True
         self.recognizer.pause_threshold = 0.8
@@ -153,7 +153,7 @@ class VoiceAutomationTester:
             self.speak("An error occurred.")
 
     def check_server_health(self):
-        """Check if server is responsive"""
+
         try:
             response = self.session.get(f"{self.base_url}/health", timeout=5)
             return response.status_code == 200
@@ -212,16 +212,16 @@ class VoiceAutomationTester:
         print(f"{Fore.GREEN}✓ Voice system ready")
 
         # Start voice recognition
-        self.speak("Voice automation system is ready. Say computer followed by your command.")
+        self.speak("Voice automation system is ready. Say assistant followed by your command.")
 
         print(f"\n{Fore.CYAN}Available Commands:")
-        print(f"{Fore.WHITE}• Open applications: 'Computer, open calculator/chrome/notepad'")
-        print(f"{Fore.WHITE}• System info: 'Computer, get CPU usage/RAM usage/system info'")
-        print(f"{Fore.WHITE}• Process management: 'Computer, list processes/kill chrome'")
-        print(f"{Fore.WHITE}• File operations: 'Computer, open file explorer/create file test.txt'")
-        print(f"{Fore.WHITE}• System control: 'Computer, shutdown/restart system'")
-        print(f"{Fore.WHITE}• Shell commands: 'Computer, run dir' (or any command)")
-        print(f"{Fore.WHITE}• Help: 'Computer, what can you do'")
+        print(f"{Fore.WHITE}• Open applications: 'Assistant, open calculator/chrome/notepad'")
+        print(f"{Fore.WHITE}• System info: 'Assistant, get CPU usage/RAM usage/system info'")
+        print(f"{Fore.WHITE}• Process management: 'Assistant, list processes/kill chrome'")
+        print(f"{Fore.WHITE}• File operations: 'Assistant, open file explorer/create file test.txt'")
+        print(f"{Fore.WHITE}• System control: 'Assistant, shutdown/restart system'")
+        print(f"{Fore.WHITE}• Shell commands: 'Assistant, run dir' (or any command)")
+        print(f"{Fore.WHITE}• Help: 'Assistant, what can you do'")
         print(f"{Fore.WHITE}• Exit: 'Exit' or 'Quit' to stop")
         print()
 
